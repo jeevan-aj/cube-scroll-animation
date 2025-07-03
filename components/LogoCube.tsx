@@ -3,15 +3,16 @@ import Cube from "./Cube";
 
 // Cube face images - using placeholder images for the demo
 const cubeImages = [
-  //  "/images/cube1.png",
-  //  "/images/cube1.png",
-  // "/images/cube1.png",
-  //   "/images/cube1.png",
-  //   "/images/cube1.png",
-  // "/images/cube1.png",
+   "/images/cube1.png",
+   "/images/cube2.png",
+  "/images/cube3.png",
+    "/images/cube4.png",
+    "/images/cube5.png",
+  "/images/cube6.png",
 ];
 
-function LogoCubes({ scrollProgress }: { scrollProgress: any }) {
+function LogoCubes({ scrollProgress,secondContainerScrollProgress }: { scrollProgress: any,secondContainerScrollProgress:any }) {
+  console.log(secondContainerScrollProgress)
   // Transform logo cubes into individual cubes
   const cube1X = useTransform(scrollProgress, [0.1, 0.2], [-180, -330]);
   const cube1Y = useTransform(scrollProgress, [0.1, 0.2], [150, 0]);
@@ -31,6 +32,10 @@ function LogoCubes({ scrollProgress }: { scrollProgress: any }) {
   const clusterX = useTransform(scrollProgress, [0.7, 1], [0, 0]);
   const clusterY = useTransform(scrollProgress, [0.7, 1], [0, 100]);
 
+
+  const clusterIndex = useTransform(secondContainerScrollProgress,[0,0.2],[1,0])  
+ console.log(clusterIndex)
+
   return (
     <div className="fixed top-1/4 left-1/2 flex items-center justify-center pointer-events-none z-10 perspective-1000">
       <motion.div
@@ -39,6 +44,7 @@ function LogoCubes({ scrollProgress }: { scrollProgress: any }) {
           scale,
           x: clusterX,
           y: clusterY,
+          opacity:clusterIndex
         }}
       >
         {/* Cube 1 */}
@@ -47,7 +53,7 @@ function LogoCubes({ scrollProgress }: { scrollProgress: any }) {
           style={{
             x: cube1X,
             y: cube1Y,
-            opacity: cubeOpacity,
+            opacity:cubeOpacity,
           }}
         >
           <Cube images={cubeImages} rotateX={rotateX} rotateY={rotateY} rotateZ={rotateZ} scrollProgress={scrollProgress} />
@@ -59,7 +65,7 @@ function LogoCubes({ scrollProgress }: { scrollProgress: any }) {
           style={{
             x: cube2X,
             y: cube2Y,
-            opacity: cubeOpacity,
+            opacity:cubeOpacity,
           }}
         >
           <Cube images={cubeImages} rotateX={rotateY} rotateY={rotateZ} rotateZ={rotateX} scrollProgress={scrollProgress} />
@@ -71,7 +77,7 @@ function LogoCubes({ scrollProgress }: { scrollProgress: any }) {
           style={{
             x: cube3X,
             y: cube3Y,
-            opacity: cubeOpacity,
+            opacity:cubeOpacity,
           }}
         >
           <Cube images={cubeImages} rotateX={rotateZ} rotateY={rotateX} rotateZ={rotateY} scrollProgress={scrollProgress} />

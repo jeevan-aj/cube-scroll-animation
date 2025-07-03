@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Woxro Task',
+  title: 'Cube Scroll',
   description: 'scroll based animation',
 }
 

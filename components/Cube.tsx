@@ -17,7 +17,7 @@ function Cube({ images, style, rotateX, rotateY, rotateZ, scrollProgress }: { im
       <div
         className="absolute w-24 h-24 bg-cover bg-center border border-white/20"
         style={{
-          // backgroundImage: `url(${images[0]})`,
+          backgroundImage: `url(${images[Math.round(Math.random()*6)]})`,
           transform: "translateZ(48px)",
           backgroundColor: "red",
           color: "red",
@@ -40,7 +40,7 @@ function Cube({ images, style, rotateX, rotateY, rotateZ, scrollProgress }: { im
       <div
         className="absolute w-24 h-24 bg-cover bg-center border border-white/20"
         style={{
-          backgroundImage: `url(${images[1]})`,
+          backgroundImage: `url(${images[Math.round(Math.random()*6)]})`,
           transform: "translateZ(-48px) rotateY(180deg)",
           backgroundColor: "green",
         }}
@@ -49,7 +49,7 @@ function Cube({ images, style, rotateX, rotateY, rotateZ, scrollProgress }: { im
       <div
         className="absolute w-24 h-24 bg-cover bg-center border border-white/20"
         style={{
-          backgroundImage: `url(${images[2]})`,
+          backgroundImage: `url(${images[Math.round(Math.random()*6)]})`,
           transform: "rotateY(90deg) translateZ(48px)",
           backgroundColor: "yellow",
         }}
@@ -58,7 +58,7 @@ function Cube({ images, style, rotateX, rotateY, rotateZ, scrollProgress }: { im
       <div
         className="absolute w-24 h-24 bg-cover bg-center border border-white/20"
         style={{
-          backgroundImage: `url(${images[3]})`,
+          backgroundImage: `url(${images[Math.round(Math.random()*6)]})`,
           transform: "rotateY(-90deg) translateZ(48px)",
           backgroundColor: "black",
         }}
@@ -67,7 +67,7 @@ function Cube({ images, style, rotateX, rotateY, rotateZ, scrollProgress }: { im
       <div
         className="absolute w-24 h-24 bg-cover bg-center border border-white/20"
         style={{
-          backgroundImage: `url(${images[4]})`,
+          backgroundImage: `url(${images[Math.round(Math.random()*6)]})`,
           transform: "rotateX(90deg) translateZ(48px)",
           backgroundColor: "white",
         }}
@@ -76,7 +76,7 @@ function Cube({ images, style, rotateX, rotateY, rotateZ, scrollProgress }: { im
       <div
         className="absolute w-24 h-24 bg-cover bg-center border border-white/20"
         style={{
-          backgroundImage: `url(${images[5]})`,
+          backgroundImage: `url(${images[Math.round(Math.random()*6)]})`,
           transform: "rotateX(-90deg) translateZ(48px)",
           backgroundColor: "orange",
         }}
